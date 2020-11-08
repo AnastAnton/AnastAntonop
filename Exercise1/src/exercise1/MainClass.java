@@ -32,7 +32,7 @@ public class MainClass {
                 }
             }
             if (numCheck == length) {
-                if (length == 1 || number.equals("10")) {
+                if ((length == 1 || number.equals("10")) && !"0".equals(number)) {
                     System.out.println("Your number is: " + number);
                 } else {
                     System.out.println("Wrong number. Your number input must be"
