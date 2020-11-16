@@ -156,7 +156,7 @@ public class MainClass extends SyntheticData{
                              + "(5) Students per course \n(6) Trainers per course \n"
                              + "(7) Assignments per course \n(8) Assignments per student \n"
                              + "(9) Students that belong to more than one cours \n"
-                             + "(10) Assignments check for students/Not working");
+                             + "(10) Assignments check for students");
             sumOfList.sumCourses(courses);
             sc8 = new Scanner (System.in);
             int i = sc8.nextInt();
