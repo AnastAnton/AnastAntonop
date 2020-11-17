@@ -160,7 +160,9 @@ public class MainClass extends SyntheticData{
                              + "(7) Assignments per course \n(8) Assignments per student \n"
                              + "(9) Students that belong to more than one cours \n"
                              + "(10) Assignments check for students on a specific date");
-            sumOfList.sumCourses(courses);
+            if(scanner1.equals("y")){
+                sumOfList.sumUserCourses(courses);
+            }           
             sc8 = new Scanner (System.in);
             int i = sc8.nextInt();
             if(i==1){

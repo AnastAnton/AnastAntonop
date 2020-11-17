@@ -26,14 +26,16 @@ public class SumOfLists {
         NumOfTrain += trn.size();
     } 
 
-    public void sumCourses(ArrayList<Course> crs){ 
-        for (Course cr : crs){
-            listCourses.add(m, cr);
-            m = NumOfCourse + 1;
-        }
-        NumOfCourse += crs.size();
+    public void sumUserCourses(ArrayList<Course> crs){ 
+        this.listCourses = crs;
     }
     
+     public void sumCourses(ArrayList<Course> crs){ 
+        for (Course cr : crs){
+            listCourses.add(m, cr);
+            m++;
+        }
+     }
     public void sumAssignments(ArrayList<Assignment> ass){ 
         for (Assignment asg : ass){
             listAssignments.add(n, asg); 
