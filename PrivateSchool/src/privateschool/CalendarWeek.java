@@ -26,16 +26,18 @@ public class CalendarWeek {
             for(Assignment asg : stud.assignments){               
                 Period period = Period.between(date, asg.getSubDateTime());
                 if(period.getYears() == 0 && period.getMonths() == 0){
-                    if(date.isAfter(asg.getSubDateTime())){
-                        if( Math.abs(period.getDays()) <= (7-i)){
-                            System.out.println(stud + " needs to submit " + stud.assignments);
+                    if(date.isBefore(asg.getSubDateTime())){
+                        if(period.getDays() <= (7-i)){
+                            System.out.println(stud + " needs to submit " + asg.toString());
+                            k = 1;
+                        }
+                    }else if (date.isAfter(asg.getSubDateTime())){
+                        if(Math.abs(period.getDays()) < i ){
+                            System.out.println(stud + " needs to submit " + asg.toString());
                             k = 1;
                         }
                     }else{
-                        if(period.getDays() < i ){
-                            System.out.println(stud + " needs to submit " + stud.assignments);
-                            k = 1;
-                        }
+                        System.out.println(stud + " needs to submit " + asg.toString());
                     }
                 }    
             }

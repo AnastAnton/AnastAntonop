@@ -6,34 +6,37 @@ public class MainClass extends SyntheticData{
     public static void main(String[] args) {
             
         ArrayList<Course> courses = new ArrayList<Course>();
-        ArrayList<Trainer> trainers = null;
-        ArrayList<ArrayList<Trainer>> listTrainers = new ArrayList<ArrayList<Trainer>>();
-        ArrayList<Student> students = null;
         ArrayList<ArrayList<Student>> listStudents = new ArrayList<ArrayList<Student>>();
-        ArrayList<Assignment> assignments = null;
         ArrayList<DataPerCourse> dataPerCourseList = new ArrayList<DataPerCourse> ();
-        ArrayList<ArrayList<Assignment>> listAssignments = new ArrayList<ArrayList<Assignment>>();
         DataPerCourse dataPerCourse1 = null;
         DataPerCourse dataPerCourse2 = null;
         DataPerCourse dataPerCourse3 = null, dataPerCourse4 = null, dataPerCourse5 = null;
         DataPerCourse dataPerCourse6 = null;
-        SumOfLists sumOfList = new SumOfLists();
-        Scanner sc = null, sc2 =null, sc3 = null, sc4 = null, sc5 = null, sc6 = null;
-        Scanner sc7 = null, sc8 = null, sc9 = null, sc10 = null;
-        int k = 0, tuitionFees = 0, totalMark = 0;
-        String[] arrOfStr;
-        String str = null, titleCourse = null, stream = null; 
-        String streamCourse = null, typeCourse = null, startingDateCourse = null;
-        String  endingDateCourse = null, name = null, lastName = null, date = null;
+        SumOfLists sumOfList = new SumOfLists();       
+        Scanner sc8 = null, sc10 = null, sc11 = null;                      
         String scanner1, checkDate;
-                
+           
         System.out.println("Welcome to the construction of a private school");
         System.out.println("Would you like to input data for courses, trainers,"
                             + " students and assignments of school?");
         System.out.println("Press 'y' for yes, else press any other key");
         Scanner sc1 = new Scanner(System.in);
         scanner1 = sc1.next();
+        
         if(scanner1.equals("y")){
+            ArrayList<Trainer> trainers = null;
+            ArrayList<ArrayList<Trainer>> listTrainers = new ArrayList<ArrayList<Trainer>>();
+            ArrayList<Student> students = null;
+            ArrayList<Assignment> assignments = null;
+            ArrayList<ArrayList<Assignment>> listAssignments = new ArrayList<ArrayList<Assignment>>();
+            Scanner sc = null, sc2 =null, sc3 = null, sc4 = null, sc5 = null, sc6 = null;
+            Scanner sc7 = null, sc9 = null;
+            int k = 0, tuitionFees = 0, totalMark = 0;
+            String[] arrOfStr;
+            String str = null, titleCourse = null, stream = null; 
+            String streamCourse = null, typeCourse = null, startingDateCourse = null;
+            String  endingDateCourse = null, name = null, lastName = null, date = null;
+
             do{
                 assignments = new ArrayList<Assignment>();
                 trainers = new ArrayList<Trainer>();
@@ -156,7 +159,7 @@ public class MainClass extends SyntheticData{
                              + "(5) Students per course \n(6) Trainers per course \n"
                              + "(7) Assignments per course \n(8) Assignments per student \n"
                              + "(9) Students that belong to more than one cours \n"
-                             + "(10) Assignments check for students");
+                             + "(10) Assignments check for students on a specific date");
             sumOfList.sumCourses(courses);
             sc8 = new Scanner (System.in);
             int i = sc8.nextInt();
@@ -254,8 +257,8 @@ public class MainClass extends SyntheticData{
                 calWeek.calendarWeek();
             }
             System.out.println("Do you want another list? Press 'y' for yes, else any key");
-            sc4 = new Scanner(System.in);
-        }while(sc4.next().equals("y"));
+            sc11 = new Scanner(System.in);
+        }while(sc11.next().equals("y"));
         System.out.println("Bye :)");
     }     
 }
